@@ -11,3 +11,7 @@ Il corso ha come l'obbiettivo di approfondire e quindi vedere nel dettaglio, le 
 
 ## Contributing
 Siete invitati a fare precisazioni, osservazioni, correzioni, sul TAB dedicato "Issues" oppure aprendo "Pull request".
+
+## Similar repos
+Come prassi, in link repository di persone più pratiche/operative di me.
+Mattia Merenda > https://github.com/merendamattia/MdP
