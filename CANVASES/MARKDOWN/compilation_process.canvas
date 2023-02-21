@@ -1,0 +1,23 @@
+{
+	"nodes":[
+		{"id":"804a0eece643b54f","x":-731,"y":-461,"width":624,"height":347,"type":"file","file":"PICS/Pasted image 20230221123645.png"},
+		{"id":"7828f6e25fc8e240","x":-686,"y":-804,"width":534,"height":149,"type":"file","file":"PICS/Pasted image 20230221165014.png"},
+		{"id":"3b726c8ae721ac8f","x":245,"y":-474,"width":543,"height":373,"type":"file","file":"PICS/Pasted image 20230221124622.png"},
+		{"id":"db39b9a2f696d4f1","x":234,"y":39,"width":566,"height":330,"type":"file","file":"PICS/Pasted image 20230221165242.png"},
+		{"id":"f80f425cf28c94c4","x":-5,"y":-317,"width":250,"height":60,"type":"text","text":"**Assembling**"},
+		{"id":"1953d70a2c11c6bb","x":-107,"y":174,"width":250,"height":60,"type":"text","text":"**Linking**"},
+		{"id":"b7753fd3542306b7","x":-874,"y":136,"width":767,"height":136,"type":"file","file":"PICS/Pasted image 20230221125854.png"},
+		{"id":"90504b48abcd790c","x":-544,"y":-565,"width":250,"height":60,"type":"text","text":"**Preprocessing**"},
+		{"id":"3e5dd4cd1a8fb6da","x":392,"y":-59,"width":250,"height":60,"type":"text","text":"**Compilation**"}
+	],
+	"edges":[
+		{"id":"0ea1a0c978a27f26","fromNode":"90504b48abcd790c","fromSide":"bottom","toNode":"804a0eece643b54f","toSide":"top"},
+		{"id":"ef5c30a67f9399ca","fromNode":"7828f6e25fc8e240","fromSide":"bottom","toNode":"90504b48abcd790c","toSide":"top"},
+		{"id":"9636255aee372738","fromNode":"804a0eece643b54f","fromSide":"right","toNode":"f80f425cf28c94c4","toSide":"left"},
+		{"id":"2c9508af37499f45","fromNode":"f80f425cf28c94c4","fromSide":"right","toNode":"3b726c8ae721ac8f","toSide":"left"},
+		{"id":"1750594a43aac0e1","fromNode":"3b726c8ae721ac8f","fromSide":"bottom","toNode":"3e5dd4cd1a8fb6da","toSide":"top"},
+		{"id":"695df7b548d9a5b9","fromNode":"3e5dd4cd1a8fb6da","fromSide":"bottom","toNode":"db39b9a2f696d4f1","toSide":"top"},
+		{"id":"ce476dd527b4a481","fromNode":"db39b9a2f696d4f1","fromSide":"left","toNode":"1953d70a2c11c6bb","toSide":"right"},
+		{"id":"cea6ceb881b65766","fromNode":"1953d70a2c11c6bb","fromSide":"left","toNode":"b7753fd3542306b7","toSide":"right"}
+	]
+}
