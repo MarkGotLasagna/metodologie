@@ -10,7 +10,7 @@ Il corso ha come l'obbiettivo di approfondire e quindi vedere nel dettaglio, le 
 ```
 
 ## Contributing
-Siete invitati a fare precisazioni, osservazioni, correzioni, nel TABK "Issues" oppure aprendo "Pull request".
+Siete invitati a fare precisazioni, osservazioni, correzioni, nel TAB "Issues" oppure aprendo "Pull request".
 
 ## Similar repos
 Come prassi, in link repository di persone più pratiche/operative di me.
