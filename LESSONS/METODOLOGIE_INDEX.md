@@ -1,3 +1,5 @@
 # Lessons
 - [[UNI/METODOLOGIE/LESSONS/MARKDOWN/Lezione1]]
-- [[Lezione2]]
+- [[UNI/METODOLOGIE/LESSONS/MARKDOWN/Lezione2]]
+- [[Lezione3]]
+- 

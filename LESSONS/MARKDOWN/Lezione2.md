@@ -51,9 +51,6 @@ Al compilatore servono indizi sui tipi delle variabili dichiarate (per default a
   >// dichiara variabile globale con C linkage
   >extern "C" int errno;
   >```
-  
-  
-
 - definizione
   ```cpp
   int b; // zero-inizialization 
@@ -203,9 +200,60 @@ void foo() {
 	std::cout << static_cast<int>(Colors::red);
 }
 ```
+## Hiding
+Anche a nome "mascheramento", se ne parla quando una dichiarazione nello scope interno nasconde un'altra dichiarazione con nome uguale dello scope esterno.
+```cpp
+int a = 1; // globale esterna
+int main() {
+	std::cout << a << std::endl; // 1
+	int a = 5; // interna
+	std::cout << a << std::endl; // 5
+}
+```
+Si può avere anche per i membri ereditati da una classe, perché lo scope della classe derivata è considerato essere incluso nello scope della classe base:
+```cpp
+struct Base {
+	int a;
+	void foo(int);
+};
+struct Derived : public Base {
+	double a; // hiding di Base::a
+	void foo(double d); // hiding del metodo Base::foo()
+};
+```
 
-### Hiding
-TO:DO
+### Estensioni della visibilità del nome
+Dichiarare funzioni con lo stesso nome non sempre è un problema, ma lo può essere
+```cpp
+// quali di queste funzioni usare in uno scope?
+Struct Base {
+	void foo(int);
+	void foo(float);
+};
+```
+La nostra `struct` ha 2 metodi che possono essere utilizzati, ma che con la derivazione della classe non vengono presi in considerazione (niente overloading ma hiding presente). Se volessimo prenderle, e tenerle nel caso ci servissero in secondo momento, usiamo:
+```cpp
+struct Derived : public Base {
+	using Base::foo;      // ora visibili tutti i metodi foo()
+	void foo(double d);   // overloading con foo(int) e foo(float)
+}
+```
+### Direttive di `using`
+```cpp
+void foo() {
+	using namespace std;
+	cout << "Hello" << endl;
+}
+```
+Nella definizione di `foo()`, il compilatore ha la possibilità di guardare dentro il `namespace std`: quando trova il nome, se dichiarato, lo usa, altrimenti usa la direttiva di `using`. Nell'esempio sotto, viene stampato anche 42 anziché "Hello" e basta.
+```cpp
+#include <iostream>
+void foo() {
+	int endl = 42;
+	using namespace std;
+	cout << "Hello" << endl;
+}
+```
 
 ---
-22-02-2023
+28-02-2023
