@@ -268,5 +268,24 @@ int main() {
 }
 ```
 
+>[!note] Particolarità dei tipi
+>Se ci chiedessimo quale fosse il valore massimo di un intero, possiamo usare la libreria standard `limits` per risponderci:
+>```cpp
+>#include <iostream>
+>#include <limits>
+>int main() {
+>	std::cout 
+>		<< "type\t| lowest()\t| min()\t\t| max()\n"
+>		<< "int\t| "
+>		<< std::numeric_limits<int>::lowest() << "\t| "
+>		<< std::numeric_limits<int>::min() << "\t| "
+>		<< std::numeric_limits<int>::max() << '\n';
+>}
+>```
+>```
+>type | lowest()    | min()       | max()
+>int  | -2147483648 | -2147483648 | 2147483647
+>```
+
 ---
-28/02/2023
+01/03/2023
