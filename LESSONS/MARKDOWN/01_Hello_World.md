@@ -104,7 +104,5 @@ ldd helloworld
 ```
 ![[Pasted image 20230221125854.png]]
 
-
-
 ---
 21-02-2023

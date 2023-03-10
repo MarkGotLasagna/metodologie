@@ -1,5 +1,5 @@
 # Lessons
-- [[UNI/METODOLOGIE/LESSONS/MARKDOWN/Lezione1]]
-- [[UNI/METODOLOGIE/LESSONS/MARKDOWN/Lezione2]]
-- [[UNI/METODOLOGIE/LESSONS/MARKDOWN/Lezione3]]
+- [[01_Hello_World]]
+- [[02_Decl_vs_Def]]
+- [[04_Lifetime]]
 - 
