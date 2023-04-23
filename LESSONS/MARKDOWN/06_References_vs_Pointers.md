@@ -1,6 +1,11 @@
 ```toc
 ```
 # Riferimenti vs Puntatori
+| `int& ref`   | `int* pref = &ref` |
+| ------------ | ------------------ |
+| Un reference | Un puntatore                   |
+
+Le differenze più importanti sono le seguenti.
 1) Quando viene creato un <u>riferimento</u>, dobbiamo *per forza inizializzarlo*; per il puntatore possiamo anche non farlo (wild/dangling/zero).
 2) Creato il <u>riferimento</u>, per tutta la sua vità si *riferirà a un specifico oggetto*, quindi non posso creare un riferimento e cambiare l'oggetto a cui si riferisce; i puntatori possono puntare oggetti diversi.
 3) Con operazioni su riferimento, lavoriamo sempre sull'oggetto riferito; il <u>puntatore</u> è un oggetto diverso e abbiamo 2 tipologie di operazioni possibili: *operazioni sul puntatore*, *operazioni sull'oggetto puntato*.
@@ -34,7 +39,8 @@
    Al termine del tempo di vita di un <u>riferimento</u>, anche lui *non tocca l'oggetto a cui si riferisce*.
 2) Non esistono i riferimenti nulli, ma possono esistere i *riferimenti dangling*: il riferimento sopravvive all'oggetto riferito che invece scompare.
    ```cpp
-   // restituiamo il riferimento di un oggetto che oramai è stato distrutto
+   // restituiamo il riferimento di un 
+   // oggetto che oramai è stato distrutto
    struct S { /* ... */ };
    S& foo {
 	   S s;
@@ -42,6 +48,9 @@
 	   return s;
    }
    ```
-   L'esempio sopra è un classico esempio di copia temporanea non necessaria: viene creato un oggetto di tipo `S` che alla fine non serve niente se non a essere distrutto. Da questa idea nascono nel C++, per ovviare al problema di copie inutili, *riferimenti a r-value* e *costruttori di spostamento* sono nati.
+   L'esempio sopra è un classico esempio di copia temporanea non necessaria: viene creato un oggetto di tipo `S` che alla fine non serve niente se non a essere distrutto. Da questa idea nascono nel C++, per ovviare al problema di copie inutili, *riferimenti a r-value* e *costruttori di spostamento*.
+---
+`ris:FolderZip` metodologie > `fas:Folder` CODE > `fas:Folder` Pointer_vs_Reference > `fas:FileCode` PointerReference.cpp
+
 ---
 01/03/2023

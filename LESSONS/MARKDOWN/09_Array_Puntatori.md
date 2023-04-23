@@ -37,6 +37,8 @@ for (;first!=last;++first){
 	// lavoro con *first
 }
 ```
+---
+`ris:FolderZip` metodologie > `fas:Folder` CODE > `fas:Folder` Pointer_vs_Reference > `fas:FileCode` ArrayPointers.cpp
 
 ---
 07/03/2023

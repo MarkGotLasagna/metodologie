@@ -146,6 +146,8 @@ struct S { T a; T b; };
 typedef T double;
 struct S { T a; T b; };
 ```
+---
+`ris:FolderZip` metodologie > `fas:Folder` CODE > `fas:Folder` ODR > `fas:FileCode` InlineFunc.cpp
 
 ---
 07/03/2023
