@@ -1,5 +1,5 @@
 /*
-    g++ Hiding.cpp -o Hiding
+    g++ -Wall -Wextra Hiding.cpp -o Hiding
 */
 #include <iostream>
 

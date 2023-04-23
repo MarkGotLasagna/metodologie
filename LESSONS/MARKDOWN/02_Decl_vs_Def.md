@@ -6,12 +6,12 @@
 - **Dichiarazione** intesa come costrutto del linguaggio che introduce un nome per una entità (abbiamo visto l'esempio di `cout` in `HelloWorld.cpp`). La struttura non la conosco, non posso creare oggetti di tipo `S`.
   ```cpp
   // dichiarazione pura del tipo S
-  struct S;
+  struct S; // ERROR: incomplete type
   ```
 - **Definizione** sottintesa come dichiarazione (siccome introduce un nome), per fornire ulteriore elemento per caratterizzare l'entità (implementazione di `foo()`). Di `T` conosco la struttura e posso creare oggetti di quel tipo.
   ```cpp
   // definizione del tipo T
-  struct T { int a; };
+  struct T { int a; }; // CORRECT
   ```
 
 Essendo linguaggio denso, C++ insiste sul fatto di usare gli stessi caratteri per indicare situazioni totalmente diverse. Nel caso sotto, il compilatore si può chiedere:
@@ -98,5 +98,9 @@ Al compilatore servono indizi sui tipi delle variabili dichiarate (per default a
 	  return t1 + t2;
   }
   ```
+
 ---
-28-02-2023
+`ris:FolderZip` metodologie > `fas:Folder` CODE > `fas:Folder` Declaration_vs_Definition > `fas:FileCode` DeclDef.cpp
+
+---
+28/02/2023

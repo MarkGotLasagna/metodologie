@@ -153,5 +153,9 @@ void foo() {
 	cout << "Hello" << endl;
 }
 ```
+
+---
+`ris:FolderZip` metodologie > `fas:Folder` CODE > `fas:Folder` Scope > `fas:FileCode` Hiding.cpp
+
 ---
 28/02/2023

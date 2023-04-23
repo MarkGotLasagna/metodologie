@@ -141,6 +141,11 @@ L'allocazione dinamica è sorgente di errori numerosi:
 - "null pointer"
   tentativo di accesso a puntatore nullo, che non possiamo deferenziare
 
+---
+`ris:FolderZip` metodologie > `fas:Folder` CODE > `fas:Folder` Allocation > `fas:FileCode` BrokenFactorial.cpp
+`ris:FolderZip` metodologie > `fas:Folder` CODE > `fas:Folder` Allocation > `fas:FileCode` DestructorLeak.cpp
+
+
 
 ---
 01/03/2023

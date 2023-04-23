@@ -105,4 +105,7 @@ ldd helloworld
 ![[Pasted image 20230221125854.png]]
 
 ---
-21-02-2023
+`ris:FolderZip` metodologie > `fas:Folder` CODE > `fas:Folder` HelloWorld > `fas:FileCode` HelloWorld.cpp
+
+---
+21/02/2023

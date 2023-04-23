@@ -147,4 +147,10 @@ int main() {
 >int  | -2147483648 | -2147483648 | 2147483647
 >```
 ---
+
+`ris:FolderZip` metodologie > `fas:Folder` CODE > `fas:Folder` Types > `fas:FileCode` MaxInt.cpp
+
+
+
+---
 01/03/2023
