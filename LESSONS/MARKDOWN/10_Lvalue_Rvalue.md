@@ -5,11 +5,12 @@
 Nel C++ possiamo categorizzare le espressioni. 
 Un'*espressione* e' caratterizzata da due proprieta' indipendenti: il *tipo* e il *valore categorico* o valore. Ogni espressione appartiene a una delle 3 categorie principali:
 - **prvalue** (pure rvalue)
-  un espressione che computa il valore di un operando di un operatore built-in o che inizializza un oggetto
+  un espressione che computa il valore di un operando di un operatore built-in o che inizializza un oggetto (il numero 5 è un prvalue)
 - **xvalue** (eXpiring value)
-  che denota un oggetto le quali risorse possono essere riutilizzate
-- **lvalue**  espressione determinante un'identita' di oggetto o funzione
+  che denota un oggetto le quali risorse possono essere riutilizzate (la risorsa sta per morire)
+- **lvalue**  espressione determinante un'identita' di oggetto o funzione (sinistra di un'operatore d'assegnamento)
 
+L'esistenza di una categorizzazione simile è dovuta dall'esistenza di una classe di priorità, dove nella quale viene dettato chi ha il permesso di "rubare" o meno una risorsa: non sempre è necessario copiare e incollare, può essere utile passare il riferimento.
 ## prvalue
 Il risultato della computazione puo' essere una variabile, un oggetto creato dell'espressione `new`, un temporaneo derivante dalla materializzazione temporanea o un suo membro.
 Sono pure values, i seguenti esempi.
@@ -82,7 +83,22 @@ Usando un riferimento a rvalue, in entrambi i casi le risorse contenute nell'ogg
   Matrix& operator=(Matrix&&);
   ```
 
-L'esempio visto sopra ora invochera' automaticamente il costruttore di spostamento, in quanto il compilatore si accorgera' che `return res` e' un xvalue, che dovra' restituirlo al chiamante.
+L'esempio visto sopra ora invochera' automaticamente il costruttore di spostamento, in quanto il compilatore si accorgera' che `return res` e' un xvalue, che dovra' restituirlo al chiamante (stiamo evitando la copia (2)). Riscriviamo l'esempio andando in overloading, saltando tutte le copie non necessarie:
+```cpp
+Matrix bar(Matrix&& arg) {
+	// modifica di arg
+	return arg; // spostamento
+}
+```
+Usando lo standard C++11, possiamo comunque riscrivere e fare un passaggio per argomento, siccome starà al compilatore capire se abbiamo fornito come argomento un lvalue o rvalue:
+```cpp
+Matrix bar(Matrix arg){
+	// modifica di arg
+	return arg; // spostamento 
+}
+```
+---
+`ris:FolderZip` metodologie > `fas:Folder` CODE > `fas:Folder` Lvalue_vs_Rvalue > `fas:FileCode` LvalueRvalue.cpp
 
 ---
 07/03/2023
