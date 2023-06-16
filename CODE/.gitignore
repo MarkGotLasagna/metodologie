@@ -1,0 +1,16 @@
+# Ignore VSCode directory
+.vscode
+
+# Ignore all executables
+*.exe
+*.out
+*.dll
+*.so
+*.dylib
+
+# Ignore all object files
+*.o
+*.obj
+
+# Ignore builds
+.build
